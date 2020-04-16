@@ -1,0 +1,32 @@
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{NameList.length}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+       {{NameList[index].Name}}
+    </view>
+  </view>
+</scroll-view>
+
+
+<view class="cu-card article">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">会议标题</view>
+    </view>
+    <view class="content">
+      <image src="../../images/Meeting.png" style="width:120rpx;height:120rpx;"></image>
+      <view class="desc">
+        <view> 开始时间: 2020-03-23 13：11：10</view>
+        <view> 结束时间: 2020-03-23 18：11：10</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">定位签到</view>
+        </view>
+      </view>
+    </view>
+     <view class="title">
+      <view class="text-cut" style="display:flex;margin-top:20rpx;">
+          <button class="cu-btn" style="width:30%;background-color:green;">修改</button>
+          <button class="cu-btn" style="width:30%;background-color:red;">删除</button>
+      </view>
+    </view>
+  </view>
+</view>

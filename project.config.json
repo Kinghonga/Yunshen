@@ -4,18 +4,26 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.11.0",
+	"libVersion": "2.10.3",
 	"appid": "wx994085081a24298b",
-	"projectname": "%E4%BA%91%E6%B7%B1%E6%97%B6%E9%9B%BE%E8%B5%B7",
+	"projectname": "%E4%BA%91%E6%B7%B1%E6%97%B6%E9%9B%BE%E8%B5%B71.0",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -31,13 +39,29 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/kbcx/kbcx",
+					"pathName": "pages/kbcx/kbcx",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

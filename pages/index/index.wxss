@@ -1,21 +1,44 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.middle-buttonArea{
+  width: 100%;
+  height: 400rpx;
+  background-color: white; 
+    /* flex布局 */
+  display: flex;  
+  /* 行布局 */
+  flex-direction: row;
+/* flex-start：主轴起点对齐(默认值)。
+flex-end：主轴终点对齐。
+center：在主轴中居中对齐。
+space-between：两端对齐，除了两端的子元素分别靠向两端的容器之外，其他子元素之间的间隔都相等。
+space-around：每个子元素之间的距离相等，两端的子元素距离容器的距离也和其它子元素之间的距离相同。 */
+  justify-content:space-between;
+  /* 换行，不换行为nowrap */
+  flex-wrap:wrap;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.middle-button-item{
+  width: 30%;
+  height: 150rpx;
+  margin: 35rpx  auto;
+  text-align: center;
 }
-
-.usermotto {
-  margin-top: 200px;
+.item-icon{
+  width:80rpx;
+  height:80rpx;
+}
+.Notice{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 30rpx;
+  line-height: 80rpx;
+  background-color: #FFFFFF;
+  padding-left: 60rpx;
+  color: #33CCCC;
+}
+.onesici{
+  font-size: 20rpx;
+  width: 70%;
+  position: absolute;
+  bottom: 15rpx;
+  left: 15%;
 }

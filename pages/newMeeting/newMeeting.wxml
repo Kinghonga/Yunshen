@@ -1,0 +1,62 @@
+<view class="cu-bar justify-start bg-white">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-blue">创建新会议</text>
+      <text class="text-ABC text-blue">New</text>
+      <!-- last-child选择器-->
+    </view>
+</view>
+<view class="cu-form-group" style="margin-top:30rpx;">
+		<input placeholder="为会议起个名字吧！（1-40个字）"></input>
+</view>
+
+<view class="cu-form-group" style="margin-top:15rpx;">
+		<input placeholder="会议简介 （0-100个字）"></input>
+</view>
+
+	<view class="cu-form-group" style="margin-top:30rpx;">
+		<view class="title">开始时间</view>
+
+    <picker mode="date" value="{{date}}" 
+    start="2020-03-01" end="2029-03-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+		<picker mode="time" value="{{time}}" start="09:01" end="21:01" 
+    bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+
+	</view>
+  	<view class="cu-form-group">
+		<view class="title">结束时间</view>
+
+    <picker mode="date" value="{{date}}" 
+    start="2020-03-01" end="2029-03-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+		<picker mode="time" value="{{time}}" start="09:01" end="21:01" 
+    bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+
+	</view>
+
+
+<view class="cu-form-group" style="margin-top:20rpx;">
+		<input placeholder="请输入会议地址（1-100字）"></input>
+</view>
+
+<view class="cu-form-group">
+  <text class="cuIcon-locationfill text-orange">  点击指定签到地点</text>
+</view>
+
+<view class="cu-bar btn-group" style="margin-top:25rpx;">
+    <button class="cu-btn bg-green lg">确认创建</button>
+</view>

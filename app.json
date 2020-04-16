@@ -1,13 +1,42 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/user/user",
+    "pages/newMeeting/newMeeting",
+    "pages/myMeeting/myMeeting",
+    "pages/kbcx/kbcx"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F0F0F0",
+    "navigationBarTitleText": "签到系统",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#606060",
+    "selectedColor": "#33CCCC",
+    "backgroundColor": "#FFFFFF",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/calendar(2).png",
+        "selectedIconPath": "images/calendar(1).png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/test.png",
+        "selectedIconPath": "images/test(1).png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于值班签到"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,13 +1,63 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 轮播图 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" style="height:285rpx;">
+  <swiper-item wx:for="{{swiperList}}" wx:key >
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+  </swiper-item>
+</swiper>
+
+
+<!-- 按钮区 -->
+<view class="middle-buttonArea">
+
+    <view class="middle-button-item">
+       <navigator url="/pages/newMeeting/newMeeting">
+        <image src="../../images/cjhy.png" class="item-icon"></image>
+        <view>创建会议</view>  
+      </navigator>
+    </view>
+
+
+    <view class="middle-button-item">
+     <navigator url="/pages/myMeeting/myMeeting">
+        <image src="../../images/hyqd.png" class="item-icon"></image>
+        <view>我的会议</view>  
+      </navigator>
+    </view>
+
+    <view class="middle-button-item">
+      <image src="../../images/zbqd.png" class="item-icon"></image>
+      <view>值班签到</view>  
+    </view>
+
+    <view class="middle-button-item">
+    <navigator url="/pages/kbcx/kbcx">
+      <image src="../../images/kbcx.png" class="item-icon"></image>
+      <view>课表查询</view>  
+       </navigator>
+    </view>
+
+    <view class="middle-button-item">
+      <image src="../../images/qj.png" class="item-icon"></image>
+      <view>请假</view>  
+    </view>
+
+    <view class="middle-button-item">
+      <image src="../../images/qt.png" class="item-icon"></image>
+      <view>其他</view>  
+    </view>
+
+</view>
+
+<view class="Notice">
+  小程序公告
+</view>
+
+
+<view style="wdith:100%;height:30rpx;text-align:center;margin-top:150rpx;color:silver;">
+  云深时雾起1.0发布 ----2020.3.29
+</view>
+
+<view class="onesici">
+      <view style=" font-weight: bold">{{hitokoto}}</view>
+      <view style="font-size: 15rpx;float:right">{{xiegang}}{{autho}}</view>
 </view>
